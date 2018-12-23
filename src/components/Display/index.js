@@ -11,7 +11,7 @@ const styles = css`
 
 class Display extends Component {
   render() {
-    return <div className={styles}>{this.props.value}</div>;
+    return <div className={styles}>{this.props.value}&nbsp;</div>;
   }
 }
 
