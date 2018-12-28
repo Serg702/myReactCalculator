@@ -40,7 +40,6 @@ class Buttons extends Component {
         <div className={buttonStyles}>
           <Button color="#607d8b" name="0" clickHandler={clickHandler} />
           <Button color="#607d8b" name="." clickHandler={clickHandler} />
-          <Button color="#8bc34a" name=":)" clickHandler={clickHandler} />
           <Button color="#ff5722" name="=" clickHandler={clickHandler} />
         </div>
       </div>
