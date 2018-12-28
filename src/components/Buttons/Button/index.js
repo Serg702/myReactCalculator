@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Button = props => {
   const cotainerStyles = css`
-    min-width: 25%;
+    min-width: ${props.name === "0" ? "50%" : "25%"};
     button:hover {
       opacity: 0.7;
     }
