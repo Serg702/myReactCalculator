@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Display from "./components/Display";
 import Buttons from "./components/Buttons";
+import calculations from "./logic/calculations";
 import { css } from "emotion";
 const container = css`
   padding: 20px;
@@ -9,7 +10,7 @@ const container = css`
 const main = css`
   box-sizing: border-box;
   border: 2px solid black;
-  max-width: 400px;
+  max-width: 300px;
   margin: 100px auto;
   label: main;
 `;
@@ -24,7 +25,7 @@ class App extends Component {
   }
 
   handleClick = buttonClicked => {
-    console.log(buttonClicked);
+    this.setState(calculations(this.state, buttonClicked));
   };
 
   render() {

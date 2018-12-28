@@ -3,16 +3,32 @@ import { css } from "emotion";
 import PropTypes from "prop-types";
 
 const Button = props => {
+  const cotainerStyles = css`
+    min-width: 25%;
+    button:hover {
+      opacity: 0.7;
+    }
+
+    button:active {
+      color: #ff0000;
+    }
+  `;
   const styles = css`
     background-color: ${props.color};
     font-size: 40px;
-    min-width: 24%;
-    padding-bottom: 10px;
+    font-weight: bold;
+    width: 100%;
     text-align: center;
-    border: 2px solid #fff;
+    padding: 5px 0;
     label: buttonStyle;
   `;
-  return <div className={styles}>{props.name}</div>;
+  return (
+    <div className={cotainerStyles}>
+      <button className={styles} onClick={() => props.clickHandler(props.name)}>
+        {props.name}
+      </button>
+    </div>
+  );
 };
 
 Button.propTypes = {
